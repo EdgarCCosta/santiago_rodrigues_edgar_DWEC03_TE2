@@ -1,0 +1,231 @@
+/* Estilo base para el fondo de la pagina */
+html {
+    background-color: #fff; 
+}
+
+/* Estilo general para el cuerpo */
+body {
+    width: 1000px;
+    height: 600px;
+    border-radius: 1%; 
+    border: solid 3px gray; 
+    margin: auto;
+    margin-top: 2%; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    background-color: #eae5ec; 
+}
+
+/* Titulos principales */
+h1 {
+    padding-top: 20px;
+    color: #9370db;
+    text-align: center;
+}
+
+h2, h3 {
+    padding-top: 20px;
+    color: #9370db;
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3.5em; 
+}
+
+/* Estilo de puntos finales */
+.puntosFinales {
+    color: #ff6347;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 120px; 
+}
+
+/* Contenedor de formulario de inicio de sesion */
+#loginForm {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+}
+
+/* Boton de inicio de sesion */
+#butonLogin {
+    width: 15%;
+    background-color: rgba(147, 112, 219, 0.2);
+    border-radius: 5px;
+}
+
+#butonLogin:hover {
+    background-color: rgba(147, 112, 219, 0.5);
+}
+
+/* Estilo de fondo de pantalla */
+.backgroundScreen {
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(254, 250, 255, 0.1)),
+    url("../images/cityBackground.jpg");
+    background-size: contain;
+}
+
+.winBackground {
+    background: linear-gradient(rgba(74, 184, 112, 0.6), rgba(74, 184, 112, 0.6)),
+    url("../images/cityBackground.jpg");
+}
+
+.lostBackground {
+    background: linear-gradient(rgba(184, 74, 76, 0.6), rgba(184, 74, 76, 0.6)),
+    url("../images/cityBackground.jpg");
+}
+
+/* Fondo de juego */
+.backgroundScreenJuego {
+    position: relative;
+    background: url("../images/cityBackground.jpg");
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+/* Contenedor de seleccion de dificultad */
+.selecDeficultad {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 100px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Botones de seleccion de dificultad */
+#butonEasy, #butonMedium, #butonHard, #butonReiniciar, #butonLogOut {
+    width: 175px;
+    height: 75px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+}
+
+#butonEasy {
+    background-color: rgba(74, 184, 112);
+}
+
+#butonMedium {
+    background-color: rgba(74, 142, 184);
+}
+
+#butonHard {
+    background-color: rgba(184, 74, 76);
+}
+
+#butonReiniciar, #butonLogOut {
+    background-color: rgb(192, 178, 159);
+}
+
+/* Boton de inicio */
+#butonStart {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(255, 196, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 3px solid #000000;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 25px;
+}
+
+/* Instrucciones */
+.instrucciones {
+    font-size: 1.2em;
+    color: rgb(218, 215, 211);
+    text-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
+    margin: 100px 0px 0px 50px;
+}
+
+/* Estilo del personaje */
+#character {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #9370db;
+    border: 2px solid #000;
+    top: 505px; 
+    left: 75px;
+    box-shadow: 0px 1px 10px rgba(253, 228, 0, 0.849);
+}
+
+/* Cabeza del personaje */
+#character::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -20px;
+    left: -2px;
+    background-color: #FFCC99;
+    border: 2px solid #000;
+    box-shadow: 0px -3px 10px rgb(253, 228, 0, 0.849);
+}
+
+/* Piernas del personaje */
+#character::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    top: 30px;
+    background-color: #058d97;
+    border: 2px solid #000;
+    box-shadow: 0px 3px 10px rgb(253, 228, 0, 0.849);
+}
+
+/* Estilo de los obstaculos */
+.obstaculo {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #9e2b23;
+    border: 3px solid #ad2424;
+    box-shadow: 2px 0px 10px rgb(211, 180, 6);
+}
+
+/* Menu superior */
+.topMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(161, 9, 207, 0.151);
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: rgb(74, 184, 112);
+    padding: 0 20px;
+    border-bottom: solid 1px #00eeff;
+}
+
+#timerSesion, #puntos {
+    flex: 1;
+    z-index: 1000;
+}
